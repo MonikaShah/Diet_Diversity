@@ -5,13 +5,13 @@ import random
 from multiselectfield import MultiSelectField
 import string
 from django.forms import Textarea
-<<<<<<< HEAD
+
 from django.forms.widgets import RadioSelect, CheckboxSelectMultiple
-from .models import Mentor,MukhyaSevika,AnganwadiWorkersRegister,Student,SchoolCoordinator,User,AnemicPregnantWoman,SMChildParentsRegister,ConcentForm,NutriGardenExpert,AnemicLactatingMother,AnemicAdolescentGirl,SMChild,SchoolStudentParent,NutriInfotainmentSurveyModel,NutriSocioDemographicModel,NutriAnthropometricParametersModel,FoodHabitsModel
-=======
+from .models import Mentor,MukhyaSevika,AnganwadiWorkersRegister,Student,SchoolCoordinator,User,AnemicPregnantWoman,SMChildParentsRegister,ConcentForm,NutriGardenExpert,AnemicLactatingMother,SMChild,SchoolStudentParent,NutriInfotainmentSurveyModel,NutriSocioDemographicModel,NutriAnthropometricParametersModel,FoodHabitsModel
+
 from bootstrap_datepicker_plus import DatePickerInput
-from .models import Mentor,MukhyaSevika,AnganwadiWorkersRegister,Student,SchoolCoordinator,User,AnemicPregnantWoman,SMChildParentsRegister,ConcentForm,NutriGardenExpert,AnemicLactatingMother,anemicadolescentgirl,SMChild,SchoolStudentParent
->>>>>>> 97f532dadca856a2f108235854001be68d4cbc17
+
+
 class Form(UserCreationForm):
     email=forms.EmailField(required=False)
     first_name=forms.CharField(max_length=255)
@@ -121,11 +121,11 @@ class AnemicLactatingMotherForm(forms.ModelForm):
                     'childbirthdate': DatePickerInput(format='%m/%d/%Y'), 
                   
         }
-class anemicadolescentgirlForm(forms.ModelForm):
-    uid =forms.CharField( widget=forms.TextInput(attrs={'readonly':'readonly'}),initial='AAG'+''.join(random.choice(string.ascii_uppercase + string.digits) for x in range(5)))
-    class Meta:
-        model = anemicadolescentgirl
-        fields = ['personalcontact','ICDSname','uid']
+
+
+
+  
+ 
 
         
 class AnemicPregnantWomanForm(forms.ModelForm):

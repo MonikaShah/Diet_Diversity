@@ -604,4 +604,5 @@ def destroy(request, id):
     data.delete()
     stu.delete()
     return redirect("/student_data/")  
- 
+def google_forms(request):
+    return render(request,'googleforms.html')   

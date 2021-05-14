@@ -112,13 +112,11 @@ ENCRYPT_KEY=b'e6P0yF7QPoszzM1FmMrfKs8yPDZ1OAHl-jhHRDYpD6g='
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-<<<<<<< HEAD
-         'NAME': 'cdd-again',
-=======
+
+
         'NAME': 'c_diet',
->>>>>>> 97f532dadca856a2f108235854001be68d4cbc17
         'USER' : 'postgres',
-        'PASSWORD' : 'Matku2k18',
+        'PASSWORD' : 'postgres',
         'HOST': 'localhost',
         'PORT':'5432'
     }
@@ -195,7 +193,6 @@ MEDIA_URL = '/media/'
 
 # SESSION_TIMEOUT_REDIRECT = '/logout/'
 WAGTAIL_SITE_NAME = 'Diet Diversity Website'
-
 
 
 

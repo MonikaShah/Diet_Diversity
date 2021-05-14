@@ -132,6 +132,7 @@
             <option value="articles">Articles</option>
             <option value="images">Images</option>
             <option value="videos">Videos</option>
+	     <option value="links">Other Links</option>
         </select>
 </div>
 <div >
@@ -148,7 +149,7 @@
                     <td></td>  
                     <td>{{doc.title}} </td>
                     <td><a href="{{ doc.document.url }}" download>Download</a> </td>
-                    <td><a href="{{ doc.document.url }}" >View</a> </td>
+                    <td><a href="{{ doc.document.url }}"target="_blank" >View</a> </td>
                     </tr>
                     {% endfor %}
             </table>
@@ -211,7 +212,7 @@
         <td></td>
         <td>{{vid.title}} </td>
         <td><a href="{{ vid.video.url }}" download>Download</a> </td>
-        <td><a href="{{ vid.video.url }}" >View</a> </td>
+        <td><a href="{{ vid.video.url }}"target="_blank" >View</a> </td>
         </tr>
                   
 
@@ -226,6 +227,14 @@
     <div class="myform" style="align-items: right;">
         <a href="/video_school/" class="btn btn-info">Upload Videos</a>
      </div>
+</div>
+
+<div class="links box">
+       <div>
+        <h2> Other Links  </h2>
+        <a href="/other_links/">Check other Links</a>
+       </div>
+
 </div>
 <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
 <script>

@@ -45,7 +45,7 @@ def video_school(request):
         if form.is_valid():
             form.save()
             messages.info(request,"File is saved.")
-            return redirect('/article_school/')
+            return redirect('/schoolresources/')
     else:
         form = VideoForm_school() # A empty, unbound form
 
@@ -77,13 +77,13 @@ def resources(request):
     image2 = image_up_icds.objects.all()
     video2 = video_icds.objects.all()
     return render(request,'article.html',{'document': document,'image':image,'video':video,'document1': document1,'image1':image1,'video1':video1,'document2': document2,'image2':image2,'video2':video2})
-def list_nutri(request):
+def nutri_docs(request):
     if request.method == 'POST':
         form = DocumentForm_nutri(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             messages.info(request,"File is saved.")
-            return redirect('/resources_nutrigarden/')
+            return redirect('/poshanvatikaresources/')
     else:
         form = DocumentForm_nutri() # A empty, unbound form
 
@@ -192,3 +192,8 @@ def icdsresources(request):
     image2 = image_up_icds.objects.all()
     video2 = video_icds.objects.all()
     return render(request,'icds_resources.html',{'document2': document2,'image2':image2,'video2':video2})
+
+
+def other_links(request):
+
+    return render(request,"other_links.html")

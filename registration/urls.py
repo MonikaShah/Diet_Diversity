@@ -30,7 +30,7 @@ urlpatterns = [
     # url(r'^adolescent_girl_registration/', views.adolescent_girl_register, name='adolescent_girl_registration'),
     url(r'^anemic_pregnant_woman_register/', views.anemic_pregnant_woman_register, name='anemic_pregnant_woman_register'),
     url(r'^anemic_lactating_mother_resgiter/', views.anemic_lactating_mother_resgiter, name='anemic_lactating_mother_resgiter'),
-    url(r'^anemic_adolescent_girl_register/', views.anemic_adolescent_girl_register, name='anemic_adolescent_girl_register'),
+    
     url(r'^sam_mam_child_register/$',views.sam_mam_child_register, name='sam_mam_child_register'),
     url(r'^sam_mam_child_parents_register/$',views.SMChildParentsRegister, name='sam_mam_child_parents_register'),
     url(r'^nutri_garden_expert_register/$', views.nutri_garden_expert, name='nutri_garden_expert_register'),

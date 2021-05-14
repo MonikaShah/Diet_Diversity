@@ -3,17 +3,17 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
-<<<<<<< HEAD
-from .forms import StudentForm,MukhyaSevikaForm,AnganwadiWorkerForm,SchoolCoordinatorForm,MentorForm,Form,AnemicPregnantWomanForm,ConcentForm,NutriGardenExpertForm,SMChildParentsRegisterForm,AnemicLactatingMotherForm,AnemicAdolescentGirlForm,SMChildForm,SchoolStudentParentForm,NutriInfotainmentSurveyForm,NutriSocioDemographicForm,NutriAnthropometricParametersForm,FoodHabitsForm
+
+from .forms import StudentForm,MukhyaSevikaForm,AnganwadiWorkerForm,SchoolCoordinatorForm,MentorForm,Form,AnemicPregnantWomanForm,ConcentForm,NutriGardenExpertForm,SMChildParentsRegisterForm,AnemicLactatingMotherForm,SMChildForm,SchoolStudentParentForm,NutriInfotainmentSurveyForm,NutriSocioDemographicForm,NutriAnthropometricParametersForm,FoodHabitsForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User,auth
-from .models import Mentor,MukhyaSevika,AnganwadiWorkersRegister,Student,SchoolCoordinator,User,AnemicPregnantWoman,ConcentForm,NutriGardenExpert,SMChildParentsRegister,AnemicLactatingMother,AnemicAdolescentGirl,SMChild,SchoolStudentParent,NutriInfotainmentSurveyModel,NutriSocioDemographicModel,NutriAnthropometricParametersModel,FoodHabitsModel
-=======
-from .forms import StudentForm,MukhyaSevikaForm,AnganwadiWorkerForm,SchoolCoordinatorForm,MentorForm,Form,AnemicPregnantWomanForm,ConcentForm,NutriGardenExpertForm,SMChildParentsRegisterForm,AnemicLactatingMotherForm,anemicadolescentgirlForm,SMChildForm,SchoolStudentParentForm
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User,auth
-from .models import Mentor,MukhyaSevika,AnganwadiWorkersRegister,Student,SchoolCoordinator,User,AnemicPregnantWoman,ConcentForm,NutriGardenExpert,SMChildParentsRegister,AnemicLactatingMother,anemicadolescentgirl,SMChild,SchoolStudentParent
->>>>>>> 97f532dadca856a2f108235854001be68d4cbc17
+from .models import Mentor,MukhyaSevika,AnganwadiWorkersRegister,Student,SchoolCoordinator,User,AnemicPregnantWoman,ConcentForm,NutriGardenExpert,SMChildParentsRegister,AnemicLactatingMother,SMChild,SchoolStudentParent,NutriInfotainmentSurveyModel,NutriSocioDemographicModel,NutriAnthropometricParametersModel,FoodHabitsModel
+
+
+
+
+
+
 from django.shortcuts import redirect
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
@@ -836,38 +836,38 @@ def mentor_registration(request):
         profile_form= MentorForm()
     return render(request,"mentor_register.html",{"profile_form":profile_form,"form":form})
     
-def anemic_adolescent_girl_register(request):
-    if request.method== "POST":
-        form= Form(request.POST)
-        print(form)
-        profile_form=  anemicadolescentgirlForm(request.POST,request.FILES)
-        print(profile_form)
+
+
+   
+ 
+
+
       
-        if form.is_valid() and profile_form.is_valid():
-            instance = form.save(commit=False)
-            profile=profile_form.save(commit=False)
-            instance.save()
-            print(instance.first_name)
-            profile.user=instance
-            print("working")
-            profile.save() 
-            my_group = Group.objects.get(name='adolescent_girl') 
-            my_group.user_set.add(instance)
-            messages.info(request,"User created")
-            firstname=form.cleaned_data['first_name']
-            username=form.cleaned_data['username']
-            email=form.cleaned_data['email']
-            password= form.cleaned_data['password1']
-            stuff_in_string ="Hello {} Your username for Community Diet Diversity(dietdiversity.communitygis.net) site is {} and Password is {}.Thanks!!".format(firstname,username, password)
-            print(stuff_in_string)
-                # email=i.email }}
-            
-            print('user created')
-            return redirect('/after_login/')
-    else:
-        form= Form(request.POST)
-        profile_form=  anemicadolescentgirlForm()
-    return render(request,"anemic_adolescent_girl_register.html",{"profile_form":profile_form,"form":form})
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
    
 def anemic_lactating_mother_resgiter(request):
     if request.method== "POST":

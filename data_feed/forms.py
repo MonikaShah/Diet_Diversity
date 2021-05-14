@@ -6,11 +6,11 @@ from django.contrib.auth.forms import UserCreationForm
 import random
 import string
 from django.forms import Textarea
-<<<<<<< HEAD
+
 from .models import DailyScheduleForm,BodyModel,EatTodayModel,DietModel,FeedbackModel,studentprof,ngprof,msprof,awprof,mentorprof,scprof,anemicadolescentgirlprof,anemiclactatingmotherprof,pregnantwomanprof,smparentsprof,GeneralInformation,SocioDemographicModel
-=======
-<<<<<<< HEAD
-from .models import DailyScheduleForm,BodyModel,EatTodayModel,DietModel,FeedbackModel,studentprof,ngprof,msprof,awprof,mentorprof,scprof
+
+
+
 
 eathabit_c=[
                 ('I eat only vegetables. I DO NOT eat milk, eggs, chiken, mutton or fish (Vegan)','I eat only vegetables. I DO NOT eat milk, eggs, chiken, mutton or fish (Vegan)'),
@@ -45,11 +45,11 @@ beforelock_c=[
         ('I carry my tiffin more than 3 times a week I never carry my tiffin','I carry my tiffin more than 3 times a week I never carry my tiffin'),
         ('I live in a hostel in the school','I live in a hostel in the school'),
 ]
-=======
-from .models import DailyScheduleForm,BodyModel,EatTodayModel,DietModel,FeedbackModel,studentprof,ngprof,msprof,awprof,mentorprof,scprof,anemicadolescentgirlprof,anemiclactatingmotherprof,pregnantwomanprof,smparentsprof
->>>>>>> 1961275a2d43ba6a3a5ad7daf6320a2bf419ed50
 
->>>>>>> 97f532dadca856a2f108235854001be68d4cbc17
+
+
+
+
 
 
 class DailySchedule(forms.ModelForm):
@@ -181,7 +181,7 @@ class pregnantwomanprofForm(forms.ModelForm):
    
     class Meta:
         model = pregnantwomanprof
-        fields = ('uid','birthdate','age','occupation','education','annualincome','weight','weightunit','height','heightunit','bmi','waist','waistunit','hip','hipunit','whratio','whratioderived','foodhabits','profile_photo','feedback')
+        fields = ('uid','birthdate','age','occupation','education','annualincome','weight','weightunit','height','heightunit','bmi','waist','waistunit','hip','hipunit')
         widgets = {
                     'birthdate': forms.DateInput(format=('%Y/%m/%d'), attrs={'class':'some_class', 'placeholder':'Select a date', 'type':'date'}),
                   
@@ -207,7 +207,7 @@ class FeedbackForm(forms.ModelForm):
             'issues': Textarea(attrs={'cols': 5, 'rows': 5}),
             'suggestions': Textarea(attrs={'cols': 5, 'rows': 5}),
         }
-<<<<<<< HEAD
+
 
 class GeneralInformationForm(forms.ModelForm):
     # birthdate=forms.DateField(input_formats='%Y/%m/%d',widget=forms.DateInput(attrs={'autocomplete':'off','class':'some_class','placeholder':'yyyy/mm/dd'}))
@@ -224,7 +224,7 @@ class SocioDemographicForm(forms.ModelForm):
         model = SocioDemographicModel
         fields = ['i_live_with','number_of_family_members','guardian_name','guardian_age','guardian_education','guardian_occupation','monthly_family_income','ration_card_color']
         
-=======
+
         
 # class DietRecallForm(forms.ModelForm):
 #     uid =forms.CharField( widget=forms.TextInput(attrs={'readonly':'readonly'}),initial='SMP'+''.join(random.choice(string.ascii_uppercase + string.digits) for x in range(5)))
@@ -236,4 +236,4 @@ class SocioDemographicForm(forms.ModelForm):
 #     class Meta:
 #         model=DietRecallModel
 #         fields=['eathabit','glasseswater','foodtime','beforelock','middaymeal','uid']
->>>>>>> 1961275a2d43ba6a3a5ad7daf6320a2bf419ed50
+

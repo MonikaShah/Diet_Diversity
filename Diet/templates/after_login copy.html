@@ -42,10 +42,11 @@
             display: none;
             position: absolute;
             background-color: #f1f1f1;
-            min-width: 260px;
+            min-width: 150px;
             overflow: auto;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
+            
         }
         
         .dropdown-content a {
@@ -178,9 +179,13 @@
 {% endif %} {% endfor %} {% for group in user.groups.all %} {% if group.name == 'student' %}
 
 <div class="container">
-    <button class="dropbtn" onclick="location.href = '/consent/'">Forms</button>
+    <button onclick="myFunction()" class="dropbtn">Forms</button>
     <!-- <button class="dropbtn" onclick="openPage('About', this, 'orange')"></button> -->
-    <!-- <div class="dropdown"> -->
+    <div id="myDropdown" class="dropdown-content">
+        <a href="https://docs.google.com/forms/d/1z9S-eWwJHYVpEX3rEXDy6ICR24Q2sEFtc_8RVI5tFQM/viewform?ts=6096a24b&gxids=7628&edit_requested=true" target="_blank" style="color: darkslategray;">Anthropometry Form</a>
+        <a href="https://docs.google.com/forms/d/1uofSZ6qO_SEwmDg55v90yK90lhGuY0uew9ns_G5pal8/edit?ts=609b4e62&gxids=7628" target="_blank" style="color: darkslategray;">Pre-test: Basic Nutrition</a>
+        <a href="https://docs.google.com/forms/d/1TdhICOJukQq8QekEyYbljPYMQxV3kJqDzjAj4ytp1rE/edit?usp=sharing_eip&ts=609b4e9a&urp=gmail_link&gxids=7628" target="_blank" style="color: darkslategray;">Pre-test: Importance of Health and Immuno-nutrition</a>
+      </div>
     <button class="dropbtn" onclick="location.href = '/student_register/'">back</button>
     <button class="dropbtn" onclick="location.href = '/form_status/'">Forms Status</button>
 </div>
