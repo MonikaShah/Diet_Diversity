@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'DemoDiet',
+
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'Diet',
-    #'CMSResources',
     'import_export',
     'django.contrib.gis',
     'base',
