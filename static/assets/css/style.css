@@ -493,7 +493,7 @@
     #hero {
         width: 100%;
         height: 100vh;
-        background: url("../img/home.jpg") top center;
+        background: url("../images/home.jpeg") top center;
         background-size: cover;
         position: relative;
         padding: 0;
