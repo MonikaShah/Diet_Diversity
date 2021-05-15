@@ -117,7 +117,7 @@ section {
 }
 
 .main-banner .banner-content {
-    background-image: url(../images/home.jpg);
+    background-image: url("../images/home.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
 }

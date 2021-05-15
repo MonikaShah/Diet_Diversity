@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'DemoDiet',
+    #'DemoDiet',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'Diet',
-    'CMSResources',
+    #'CMSResources',
     'import_export',
     'django.contrib.gis',
     'base',
@@ -116,7 +116,7 @@ DATABASES = {
 
         'NAME': 'c_diet',
         'USER' : 'postgres',
-        'PASSWORD' : 'postgres',
+        'PASSWORD' : 'Matku2k18',
         'HOST': 'localhost',
         'PORT':'5432'
     }

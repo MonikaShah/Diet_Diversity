@@ -30,7 +30,7 @@ wagtail_urlpatterns = [
 urlpatterns =[
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
-    path('',include('DemoDiet.urls')),
+    #path('',include('DemoDiet.urls')),
     path('',include('login.urls')),
     path('',include('base.urls')),
     path('',include('registration.urls')),
