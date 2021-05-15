@@ -115,7 +115,7 @@ DATABASES = {
 
         'NAME': 'c_diet',
         'USER' : 'postgres',
-        'PASSWORD' : 'Matku2k18',
+        'PASSWORD' : 'postgres',
         'HOST': 'localhost',
         'PORT':'5432'
     }
