@@ -30,12 +30,13 @@ wagtail_urlpatterns = [
 urlpatterns =[
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
-    path('',include('DemoDiet.urls')),
+    # path('',include('DemoDiet.urls')),
     path('',include('login.urls')),
     path('',include('base.urls')),
     path('',include('registration.urls')),
     path('',include('resources.urls')),
     path('',include('data_feed.urls')),
+    # path('graphs/',views.graphs,name='graphs'),
     # path('',include('base.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + wagtail_urlpatterns
 
